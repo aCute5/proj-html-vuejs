@@ -11,8 +11,26 @@ import {
   faCar,
   faLink,
 } from "@fortawesome/free-solid-svg-icons"; // importiamo le icone che ci servono
-
-library.add(faChevronRight, faHatWizard, faStar, faCartShopping, faCar, faLink); // aggiungiamo le icone nella libreria del progetto
+import {
+  faFacebook,
+  faTwitter,
+  faYoutubeSquare,
+  faLinkedinIn,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+library.add(
+  faChevronRight,
+  faHatWizard,
+  faStar,
+  faCartShopping,
+  faCar,
+  faLink,
+  faFacebook,
+  faTwitter,
+  faYoutubeSquare,
+  faLinkedinIn,
+  faInstagram
+); // aggiungiamo le icone nella libreria del progetto
 Vue.component("FontAwesomeIcon", FontAwesomeIcon); // registrazione globale del componente FontAwesomeIcon per renderlo usabile in qualsiasi parte del codice senza ulteriore importazione
 
 Vue.config.productionTip = false;
