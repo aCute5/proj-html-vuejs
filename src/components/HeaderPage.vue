@@ -6,7 +6,7 @@
           <img src="@/img/logo-restaurant-2x-400x77.png" alt="" />
         </a>
       </div>
-      <ul class="nav col-5">
+      <ul class="nav col-6">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -37,8 +37,11 @@
     </nav>
     <div class="row slider">
       <div class="fixed-buttons">
-        <button>ciao <sup>ciao</sup></button>
-        <button>ciao</button>
+        <button class="btn btn-light"><span>demos</span></button>
+        <button class="btn btn-light">
+          <sup>$</sup> <span class="price">39</span>
+          <span class="sale"> sale</span>
+        </button>
       </div>
       <div class="col-4 slide-title">
         <div class="row">
@@ -69,6 +72,20 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+$black: #030303;
+$tundora: #434243;
+$silver: #bcbcbc;
+$almond: #937a6b;
+$oregon: #944402;
+$easternblue: #2787b2;
+$christine: #f3790c;
+$equator: #e3bd5e;
+$christi: #69a10e;
+$zeus: #1f1914;
+$sisal: #d6cbbd;
+$mantle: #88978d;
+$fieryorange: #b44a13;
+$slategrey: #6f7f8c;
 .header {
   height: 70vh;
   background-image: url("@/img/slider52x.jpg");
@@ -109,8 +126,38 @@ a {
 }
 .fixed-buttons {
   position: fixed;
-  top: 20%;
-  left: 96%;
+  top: 15%;
+  left: 96.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.fixed-buttons .btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.3rem;
+  color: $christi;
+  line-height: 1rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+.btn sup {
+  align-self: flex-start;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.sale {
+  font-size: 1rem;
+  line-height: 0.8rem;
+  color: #434243;
 }
 .slide-title {
   display: flex;

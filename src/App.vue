@@ -37,7 +37,17 @@ $slategrey: #6f7f8c;
 @import "~bootstrap/scss/bootstrap";
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", cursive;
+}
+h1 {
+  font-size: 5rem;
+}
 * {
   padding: 0;
   margin: 0;
