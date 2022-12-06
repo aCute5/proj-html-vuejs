@@ -107,12 +107,130 @@
         </div>
       </div>
     </div>
+    <SliderPage></SliderPage>
+    <div class="critic container py-5">
+      <h2 class="text-center critic-title">What critics are saying about us</h2>
+      <div class="row gy-3 py-5">
+        <div class="col-12">
+          <div class="row gx-0">
+            <div class="col-6">
+              <img src="@/img/blog72x-600x687.jpg" class="criticimg" alt="" />
+            </div>
+            <div class="col-6 card-critic black">
+              <div class="row gy-4">
+                <div class="offset-2 col-12">
+                  <div class="overtitle">
+                    <span> MEGGY STEWART</span>
+                  </div>
+                </div>
+                <div class="offset-2 col-12">
+                  <h2>NEW YORK TIMES</h2>
+                </div>
+                <div class="offset-2 col-12">
+                  <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                  <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                  <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                  <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                  <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                </div>
+                <div class="offset-2 col-12">
+                  <div class="linewhite"></div>
+                </div>
+                <div class="offset-2 col-9">
+                  <p>
+                    Non arcu mauris tortor ultrices mollis tellus eursmod
+                    fermentum.Habitant amet tincidunt id sapein accusan sed at.
+                  </p>
+                </div>
+                <div class="offset-2 col-9">
+                  <p>
+                    Mmalesuada ullamcorper amet-Pretium pretium idgnissim nisi.
+                  </p>
+                </div>
+                <div class="offset-2 col-9">
+                  <button type="button" class="btn">READ FULL ARTICLE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 d-flex layoutfor2cards">
+          <div class="col-5 card-critic p-5 first">
+            <div class="row p-5 gy-4">
+              <div class="offset-2 col-12">
+                <div class="overtitle">
+                  <span> MAREY MAXEY</span>
+                </div>
+              </div>
+              <div class="offset-2 col-12">
+                <h2>THE GUARDIAN</h2>
+              </div>
+              <div class="offset-2 col-12">
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+              </div>
+              <div class="offset-2 col-12">
+                <div class="linewhite"></div>
+              </div>
+              <div class="offset-2 col-9">
+                <p>
+                  Non arcu mauris tortor ultrices mollis tellus eursmod
+                  fermentum.Habitant amet tincidunt id sapein accusan sed.
+                </p>
+              </div>
+              <div class="offset-2 col-9">
+                <button type="button" class="btn">READ FULL ARTICLE</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 card-critic p-5 second">
+            <div class="row p-5 gy-4">
+              <div class="offset-2 col-12">
+                <div class="overtitle">
+                  <span> MAREY MAXEY</span>
+                </div>
+              </div>
+              <div class="offset-2 col-12">
+                <h2>THE GUARDIAN</h2>
+              </div>
+              <div class="offset-2 col-12">
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+                <font-awesome-icon class="stars" icon="fa-solid fa-star" />
+              </div>
+              <div class="offset-2 col-12">
+                <div class="linewhite"></div>
+              </div>
+              <div class="offset-2 col-9">
+                <p>
+                  Non arcu mauris tortor ultrices mollis tellus eursmod
+                  fermentum.Habitant amet tincidunt id sapein accusan sed.
+                </p>
+              </div>
+              <div class="offset-2 col-9">
+                <button type="button" class="btn">READ FULL ARTICLE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import SliderPage from "@/components/SliderPage.vue";
+
 export default {
   name: "MainPage",
+  components: {
+    SliderPage,
+  },
 };
 </script>
 
@@ -136,7 +254,6 @@ $slategrey: #6f7f8c;
   background-color: white;
 }
 .white-section {
-  height: 50vh;
   padding: 5rem;
 }
 .p-signature {
@@ -174,10 +291,81 @@ $slategrey: #6f7f8c;
   letter-spacing: 0.1rem;
 }
 .linewhite {
-  background-color: rgb(0, 0, 0);
+  background-color: #ffffff;
   width: 50px;
   height: 1.2px;
-  opacity: 0.3;
-  margin: auto;
+}
+.critic .container {
+  max-width: 800px;
+}
+.critic-title {
+  font-family: "Lora", serif;
+  font-size: 3rem;
+}
+//Style per il componente card da cancellare e mettere nel CriticsCard
+
+.card-critic {
+  padding: 1rem;
+  display: flex;
+  color: white;
+  align-items: center;
+  line-height: 1.5rem;
+}
+.layoutfor2cards {
+  justify-content: space-between;
+}
+.layoutfor2cards .col-5 {
+  flex-basis: 49%;
+}
+.card-critic.first {
+  background-image: url("@/img/info52x.jpg");
+  box-shadow: inset 0px 250px 250px 0px rgba($color: #000000, $alpha: 1);
+  background-position: 50% 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-critic.second {
+  background-image: url("@/img/info12x.jpg");
+  box-shadow: inset 0px 250px 250px 0px rgba($color: #000000, $alpha: 1);
+  background-position: 50% 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-critic h2 {
+  font-size: 4rem;
+}
+.black {
+  background-color: #030303;
+}
+.card-critic p {
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+.criticimg {
+  width: 100%;
+  height: 100%;
+}
+.overtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.overtitle span {
+  font-variant: small-caps;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  color: #bcbcbc;
+}
+.stars {
+  font-size: 1rem;
+}
+.btn {
+  color: white;
+  border: 0.2px solid white;
+  border-radius: 0px;
+  font-variant: small-caps;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
 }
 </style>

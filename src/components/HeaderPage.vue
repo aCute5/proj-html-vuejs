@@ -87,7 +87,7 @@ $mantle: #88978d;
 $fieryorange: #b44a13;
 $slategrey: #6f7f8c;
 .header {
-  height: 70vh;
+  height: 100vh;
   background-image: url("@/img/slider52x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
