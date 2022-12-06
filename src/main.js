@@ -12,11 +12,11 @@ import {
   faLink,
 } from "@fortawesome/free-solid-svg-icons"; // importiamo le icone che ci servono
 import {
-  faFacebook,
   faTwitter,
-  faYoutubeSquare,
+  faYoutube,
   faLinkedinIn,
   faInstagram,
+  faFacebookF,
 } from "@fortawesome/free-brands-svg-icons";
 library.add(
   faChevronRight,
@@ -25,9 +25,9 @@ library.add(
   faCartShopping,
   faCar,
   faLink,
-  faFacebook,
+  faFacebookF,
   faTwitter,
-  faYoutubeSquare,
+  faYoutube,
   faLinkedinIn,
   faInstagram
 ); // aggiungiamo le icone nella libreria del progetto
