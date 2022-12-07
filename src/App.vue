@@ -48,6 +48,7 @@ h5,
 h6 {
   font-family: "Bebas Neue", cursive;
 }
+
 h1 {
   font-size: 5rem;
 }

@@ -12,6 +12,9 @@
             {{ item }}</a
           >
         </li>
+        <liv class="nav-item">
+          <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+        </liv>
       </ul>
     </nav>
     <div class="row slider">
@@ -87,6 +90,11 @@ $slategrey: #6f7f8c;
   background-color: black;
   color: white;
   position: relative;
+}
+.btn:hover {
+  transform: scale(1.2);
+  color: black;
+  background-color: white;
 }
 .navbar {
   display: flex;

@@ -293,7 +293,13 @@
         </div>
       </div>
     </div>
-    <SliderPage class="mt-5"></SliderPage>
+    <SliderPage
+      v-for="objSlider in arrSlider.slice(1)"
+      :key="objSlider"
+      :info="objSlider"
+      :style="backgroundStyles(objSlider.background)"
+      class="mt-5"
+    ></SliderPage>
     <div class="container mt-5">
       <div class="row">
         <div class="mt-5 col-4 menu-grey">
@@ -474,7 +480,7 @@ export default {
     return {
       arrSlider: [
         {
-          background: "@/img/slider32x.jpg",
+          background: "/img/slider32x.jpg",
           overtitle: "Fine dining Experience",
           title: "The best Table in Town",
           paragraph:
@@ -482,13 +488,13 @@ export default {
           button: "Explore the menu",
         },
         {
-          background: "@/img/slider32x.jpg",
+          background: "/img/slider72x-scaled.jpg",
           overtitle: "Enjoy your meal at home",
           title: "Take out now available",
           paragraph:
             "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla.",
           button:
-            "View Take out menu + <font-awesome-icon icon='fa-solid fa-car'/>",
+            "View Take out menu" + <font-awesome-icon icon="fa-solid fa-car" />,
         },
       ],
     };
@@ -518,8 +524,20 @@ $sisal: #d6cbbd;
 $mantle: #88978d;
 $fieryorange: #b44a13;
 $slategrey: #6f7f8c;
+
+.btn:hover {
+  transform: scale(1.2);
+  color: black;
+  background-color: white;
+}
 .white-section {
   padding: 5rem;
+}
+.white-section img:hover {
+  transform: scale(1.1);
+}
+.white-section img:hover + .info-img {
+  transform: scale(1.2);
 }
 .p-signature {
   line-height: 2.3rem;
@@ -582,6 +600,10 @@ $slategrey: #6f7f8c;
   align-items: center;
   line-height: 1.5rem;
 }
+.card-critic.black:hover {
+  transform: translate(-10px, -5%) scale(1.1);
+  transition: all 0.5s ease-in;
+}
 .layoutfor2cards {
   justify-content: space-between;
 }
@@ -601,6 +623,12 @@ $slategrey: #6f7f8c;
   background-position: 50% 40%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.card-critic.first:hover,
+.card-critic.second:hover {
+  box-shadow: none;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in;
 }
 .card-critic h2 {
   font-size: 4rem;
