@@ -1,5 +1,11 @@
 <template>
-  <div class="slider container-fluid">
+  <div
+    class="slider container-fluid"
+    data-aos="fade-out"
+    data-aos-easing="ease-in-sine"
+    data-aos-duration="5000"
+    data-aos-anchor-placement="top-center"
+  >
     <div class="row">
       <div class="col-4 offset-8 slide-title">
         <div class="row">
@@ -39,6 +45,20 @@ export default {
   background-position-x: 0%;
   background-color: black;
   color: white;
+  @keyframes slideInRight {
+    0% {
+      background-position-x: 100%;
+    }
+    100% {
+      background-position: 0%;
+    }
+  }
+  [data-aos="move-background"] {
+    animation: 1.2s ease-out slideInRight;
+  }
+  [data-aos="move-background"].aos-animate {
+    animation: 1.2s ease-out slideInRight;
+  }
 }
 .slide-title {
   height: 100%;

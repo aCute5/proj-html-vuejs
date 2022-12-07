@@ -112,6 +112,10 @@
       :key="objSlider"
       :info="objSlider"
       :style="backgroundStyles(objSlider.background)"
+      data-aos="fade-down"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="5000"
+      data-aos-anchor-placement="top-center"
     ></SliderPage>
     <div class="critic container py-5">
       <h2 class="text-center critic-title">What critics are saying about us</h2>
@@ -227,21 +231,38 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid pao">
-      <div class="info-pao">KUNG PAO CHICKEN - $32</div>
+    <div
+      class="container-fluid pao"
+      data-aos="fade-down"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="5000"
+      data-aos-anchor-placement="top-center"
+    >
+      <div
+        class="info-pao"
+        data-aos="zoom-in-up"
+        data-aos-duration="10000000000"
+      >
+        KUNG PAO CHICKEN - $32
+      </div>
     </div>
     <div class="container promotions">
       <h2 class="text-center py-5 critic-title">Latest news & promotions</h2>
       <div class="linegrey"></div>
       <div class="row container">
         <div class="col-4">
-          <div class="row gy-3">
+          <div class="row gy-3 relative-promotions">
             <div class="col-12">
               <img
                 src="@/img/blog92x-600x687.jpg"
                 class="img-promotion"
                 alt=""
               />
+              <div class="col-12 text-center hover-promotions">
+                <font-awesome-icon icon="fa-solid fa-link" />
+                <h3>The best coffe in town</h3>
+                <span>News</span>
+              </div>
             </div>
             <div class="col-12 text-center">
               <h3>The best coffe in town</h3>
@@ -254,7 +275,7 @@
           </div>
         </div>
         <div class="col-4">
-          <div class="row gy-3">
+          <div class="row gy-3 relative-promotions">
             <div class="col-12">
               <img
                 src="@/img/blog72x-600x687.jpg"
@@ -273,7 +294,7 @@
           </div>
         </div>
         <div class="col-4">
-          <div class="row gy-3">
+          <div class="row gy-3 relative-promotions">
             <div class="col-12">
               <img
                 src="@/img/blog82x-600x687.jpg"
@@ -299,7 +320,8 @@
       :info="objSlider"
       :style="backgroundStyles(objSlider.background)"
       class="mt-5"
-    ></SliderPage>
+    >
+    </SliderPage>
     <div class="container mt-5">
       <div class="row">
         <div class="mt-5 col-4 menu-grey">
@@ -439,7 +461,13 @@
         </div>
       </div>
     </div>
-    <div class="mt-5 container-fluid braised">
+    <div
+      class="mt-5 container-fluid braised"
+      data-aos="fade-out"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="5000"
+      data-aos-anchor-placement="top-center"
+    >
       <div class="container-product">
         <div class="offset-2 col-4 p-5">
           <div class="row p-5 black-product">
@@ -534,10 +562,12 @@ $slategrey: #6f7f8c;
   padding: 5rem;
 }
 .white-section img:hover {
+  transition: all 0.5s ease-in;
   transform: scale(1.1);
 }
 .white-section img:hover + .info-img {
   transform: scale(1.2);
+  transition: all 0.5s ease-in;
 }
 .p-signature {
   line-height: 2.3rem;
@@ -680,7 +710,7 @@ $slategrey: #6f7f8c;
   position: absolute;
   left: 45%;
   bottom: 22%;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.2rem;
   color: rgb(255, 255, 255);
@@ -693,6 +723,28 @@ $slategrey: #6f7f8c;
   min-height: 560px;
   width: 100%;
 }
+.relative-promotions {
+  position: relative;
+}
+.hover-promotions {
+  position: absolute;
+  bottom: 50%;
+  right: 1%;
+  opacity: 0;
+  color: white;
+}
+.img-promotion:hover + .hover-promotions {
+  transform: translate(0px, 20%);
+  bottom: 30%;
+  opacity: 1;
+  transform: scale(1.2);
+  transition: all 0.5s ease-in;
+}
+.img-promotion:hover {
+  transform: translate(0px, 20%);
+  transition: all 0.5s ease-in;
+}
+
 // MENU STYLE
 .container .menu-grey {
   padding: 2rem;

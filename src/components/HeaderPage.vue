@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid header">
+  <div class="container-fluid header view">
     <nav class="navbar row">
       <div class="col-4">
         <a class="navbar-brand" href="#">
