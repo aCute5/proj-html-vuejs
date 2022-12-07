@@ -107,7 +107,12 @@
         </div>
       </div>
     </div>
-    <SliderPage></SliderPage>
+    <SliderPage
+      v-for="objSlider in arrSlider.slice(0, 1)"
+      :key="objSlider"
+      :info="objSlider"
+      :style="backgroundStyles(objSlider.background)"
+    ></SliderPage>
     <div class="critic container py-5">
       <h2 class="text-center critic-title">What critics are saying about us</h2>
       <div class="linegrey"></div>
@@ -464,6 +469,36 @@ export default {
   name: "MainPage",
   components: {
     SliderPage,
+  },
+  data() {
+    return {
+      arrSlider: [
+        {
+          background: "@/img/slider32x.jpg",
+          overtitle: "Fine dining Experience",
+          title: "The best Table in Town",
+          paragraph:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla.",
+          button: "Explore the menu",
+        },
+        {
+          background: "@/img/slider32x.jpg",
+          overtitle: "Enjoy your meal at home",
+          title: "Take out now available",
+          paragraph:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla.",
+          button:
+            "View Take out menu + <font-awesome-icon icon='fa-solid fa-car'/>",
+        },
+      ],
+    };
+  },
+  methods: {
+    backgroundStyles(image) {
+      return {
+        "background-image": `url(${image})`,
+      };
+    },
   },
 };
 </script>

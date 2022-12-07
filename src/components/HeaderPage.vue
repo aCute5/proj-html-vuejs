@@ -7,31 +7,10 @@
         </a>
       </div>
       <ul class="nav col-6">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Culinary History</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Our Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Our Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Takeout</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"
-            ><font-awesome-icon icon="fa-solid fa-cart-shopping"
-          /></a>
+        <li v-for="(item, i) in navbar" :key="i" class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">
+            {{ item }}</a
+          >
         </li>
       </ul>
     </nav>
@@ -69,6 +48,19 @@
 <script>
 export default {
   name: "HeaderPage",
+  data() {
+    return {
+      navbar: [
+        "Home",
+        "Culinary History",
+        "Our Team",
+        "Our Menu",
+        "Takeout",
+        "Bullettin",
+        "Reservations",
+      ],
+    };
+  },
 };
 </script>
 <style scoped lang="scss">

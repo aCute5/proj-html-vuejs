@@ -5,18 +5,16 @@
         <div class="row">
           <div class="overtitle col-12 gy-5">
             <div class="linewhite"></div>
-            <span> fine dining experience</span>
+            <span>{{ info.overtitle }}</span>
           </div>
           <div class="col-12 gy-5">
-            <h1 class="title">THE BEST TABLE IN</h1>
-            <h1 class="title">TOWN</h1>
+            <h1 class="title">{{ info.title }}</h1>
           </div>
           <p class="col-12 gy-5">
-            Pellenstque vitae viverra risus,sagittis.Venenatis ridicuos
-            sceleritsque nis in unrna nulla. Sit tempora et nisl,ac felis.
+            {{ info.paragraph }}
           </p>
           <div class="col-12 gy-5">
-            <button type="button" class="btn">EXPLORE THE MENU</button>
+            <button type="button" class="btn">{{ info.button }}</button>
           </div>
         </div>
       </div>
@@ -27,13 +25,15 @@
 <script>
 export default {
   name: "SliderPage",
+  props: {
+    info: Object,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .slider {
   height: 100vh;
-  background-image: url("@/img/slider32x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 0%;
