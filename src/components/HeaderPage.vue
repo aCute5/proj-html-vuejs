@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid header view">
-    <nav class="navbar row">
+    <nav class="navbar p-3 row">
       <div class="col-4">
         <a class="navbar-brand" href="#">
           <img src="@/img/logo-restaurant-2x-400x77.png" alt="" />
@@ -26,7 +26,7 @@
         </button>
       </div>
       <div class="col-4 slide-title">
-        <div class="row">
+        <div class="row p-5">
           <div class="overtitle col-8 offset-1">
             <div class="linewhite"></div>
             <span> the best table in town</span>

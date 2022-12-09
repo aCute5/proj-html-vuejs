@@ -1,10 +1,10 @@
 <template>
   <div
     class="slider container-fluid"
-    data-aos="fade-out"
+    data-aos="fade-right"
     data-aos-easing="ease-in-sine"
-    data-aos-duration="5000"
-    data-aos-anchor-placement="top-center"
+    data-aos-offset="300"
+    data-aos-duration="800"
   >
     <div class="row">
       <div class="col-4 offset-8 slide-title">

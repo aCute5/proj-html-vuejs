@@ -112,10 +112,6 @@
       :key="objSlider"
       :info="objSlider"
       :style="backgroundStyles(objSlider.background)"
-      data-aos="fade-down"
-      data-aos-easing="ease-in-sine"
-      data-aos-duration="5000"
-      data-aos-anchor-placement="top-center"
     ></SliderPage>
     <div class="critic container py-5">
       <h2 class="text-center critic-title">What critics are saying about us</h2>
@@ -265,14 +261,13 @@
       class="mt-5"
     >
     </SliderPage>
-    <MenuPage></MenuPage>
+    <MenuPage data-aos="zoom-in-down" data-aos-duration="1000"></MenuPage>
 
     <div
       class="mt-5 container-fluid braised"
-      data-aos="fade-out"
+      data-aos="fade-right"
       data-aos-easing="ease-in-sine"
-      data-aos-duration="5000"
-      data-aos-anchor-placement="top-center"
+      data-aos-offset="300"
     >
       <div class="container-product">
         <div class="offset-2 col-4 p-5">
