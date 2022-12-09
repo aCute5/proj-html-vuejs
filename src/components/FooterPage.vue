@@ -3,15 +3,14 @@
     <div class="container socials">
       <div class="row gy-5 text-center">
         <div class="col-12">
-          <img src="@/img/logo-restaurant.png" alt="" />
+          <img :src="arrFooter.image" alt="" />
         </div>
         <div class="offset-4 col-4 text-center">
           <p class="text-white">
-            Quam eu sit mass condimentum.Volupatat non pulvinar aliquet nunc.
-            Quam eu proin sit massa condimentum.
+            {{ arrFooter.paragraph }}
           </p>
         </div>
-        <div class="col-12 brands">
+        <div v-if="arrFooter.iconscheck == true" class="col-12 brands">
           <font-awesome-icon
             class="brand-icons"
             icon="fa-brands fa-facebook-f"
@@ -42,6 +41,16 @@
 <script>
 export default {
   name: "FooterPage",
+  data() {
+    return {
+      arrFooter: {
+        image: "/img/logo-restaurant.png",
+        paragraph:
+          "Quam eu sit mass condimentum.Volupatat non pulvinar aliquet nunc. Quam eu proin sit massa condimentum.",
+        iconscheck: true,
+      },
+    };
+  },
 };
 </script>
 
