@@ -270,10 +270,18 @@
       data-aos-offset="300"
     >
       <div class="container-product">
+        >
         <div class="offset-2 col-4 p-5">
           <div class="row p-5 black-product">
             <div class="col-6">
-              <h1>Braised Abalone</h1>
+              <h1
+                data-aos="fade-zoom"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="300"
+                data-aos-offset="0"
+              >
+                Braised Abalone
+              </h1>
             </div>
             <div class="col-2 offset-2">
               <span class="price"> $52</span>
