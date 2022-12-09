@@ -246,72 +246,15 @@
         KUNG PAO CHICKEN - $32
       </div>
     </div>
-    <div class="container promotions">
-      <h2 class="text-center py-5 critic-title">Latest news & promotions</h2>
+    <div class="container mt-5">
+      <h3 class="text-center">Latest NEws & Promotions</h3>
       <div class="linegrey"></div>
-      <div class="row container">
-        <div class="col-4">
-          <div class="row gy-3 relative-promotions">
-            <div class="col-12">
-              <img
-                src="@/img/blog92x-600x687.jpg"
-                class="img-promotion"
-                alt=""
-              />
-              <div class="col-12 text-center hover-promotions">
-                <font-awesome-icon icon="fa-solid fa-link" />
-                <h3>The best coffe in town</h3>
-                <span>News</span>
-              </div>
-            </div>
-            <div class="col-12 text-center">
-              <h3>The best coffe in town</h3>
-            </div>
-            <div class="col-12 text-center info-promotions">
-              <span>
-                BY Admin &#x7c; January 7th, 2020 &#x7c; Categories:News
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="row gy-3 relative-promotions">
-            <div class="col-12">
-              <img
-                src="@/img/blog72x-600x687.jpg"
-                class="img-promotion"
-                alt=""
-              />
-            </div>
-            <div class="col-12 text-center">
-              <h3>The best coffe in town</h3>
-            </div>
-            <div class="col-12 text-center info-promotions">
-              <span>
-                BY Admin &#x7c; January 7th, 2020 &#x7c; Categories:News
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="row gy-3 relative-promotions">
-            <div class="col-12">
-              <img
-                src="@/img/blog82x-600x687.jpg"
-                class="img-promotion"
-                alt=""
-              />
-            </div>
-            <div class="col-12 text-center">
-              <h3>The best coffe in town</h3>
-            </div>
-            <div class="col-12 text-center info-promotions">
-              <span>
-                BY Admin &#x7c; January 7th, 2020 &#x7c; Categories:News
-              </span>
-            </div>
-          </div>
-        </div>
+      <div class="row">
+        <CardPromotion
+          v-for="objCard in arrPromotions"
+          :key="objCard"
+          :card="objCard"
+        ></CardPromotion>
       </div>
     </div>
     <SliderPage
@@ -322,145 +265,8 @@
       class="mt-5"
     >
     </SliderPage>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="mt-5 col-4 menu-grey">
-          <div class="col-12"><h1>HORS D'OEUVRES</h1></div>
-          <div class="row mt-5">
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2">$48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2"> $48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2"> $48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2"> $48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mb-5 col-4 menu-black">
-          <div class="col-12"><h1>HORS D'OEUVRES</h1></div>
-          <div class="row mt-5">
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2">$48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2"> $48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2"> $48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2"> $48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 col-4 menu-grey">
-          <div class="col-12"><h1>HORS D'OEUVRES</h1></div>
-          <div class="row mt-5">
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2">$48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2"> $48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2"> $48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <h3 class="product col-6">AHI SALMON NIGIRI</h3>
-                <span class="price offset-4 col-2"> $48</span>
-                <p class="col-12">
-                  Eget voluptate vitae quis rutrum blandit sed. Quam nulla sit
-                  lacinia
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <MenuPage></MenuPage>
+
     <div
       class="mt-5 container-fluid braised"
       data-aos="fade-out"
@@ -498,11 +304,15 @@
 
 <script>
 import SliderPage from "@/components/SliderPage.vue";
+import CardPromotion from "@/components/CardPromotion.vue";
+import MenuPage from "@/components/MenuPage.vue";
 
 export default {
   name: "MainPage",
   components: {
     SliderPage,
+    CardPromotion,
+    MenuPage,
   },
   data() {
     return {
@@ -521,8 +331,21 @@ export default {
           title: "Take out now available",
           paragraph:
             "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla.",
-          button:
-            "View Take out menu" + <font-awesome-icon icon="fa-solid fa-car" />,
+          button: "View Take out menu",
+        },
+      ],
+      arrPromotions: [
+        {
+          image: "/img/blog92x-600x687.jpg",
+          title: "THE BEST COFFE IN TOWN",
+        },
+        {
+          image: "/img/blog72x-600x687.jpg",
+          title: "DISCOVER OUR NEW MENU",
+        },
+        {
+          image: "/img/blog82x-600x687.jpg",
+          title: "WE NOW ACCEPT SQUARE!",
         },
       ],
     };
@@ -622,7 +445,6 @@ $slategrey: #6f7f8c;
   font-size: 3rem;
 }
 //Style per il componente card da cancellare e mettere nel CriticsCard
-
 .card-critic {
   padding: 1rem;
   display: flex;
@@ -746,22 +568,7 @@ $slategrey: #6f7f8c;
 }
 
 // MENU STYLE
-.container .menu-grey {
-  padding: 2rem;
-  background-color: #e8e8e8;
-  line-height: 2rem;
-}
-.container .menu-black {
-  padding: 2rem;
-  background-color: black;
-  color: white;
-  line-height: 2rem;
-}
-.price {
-  font-variant: small-caps;
-  letter-spacing: 0.1rem;
-  font-weight: bold;
-}
+
 .braised {
   position: relative;
   background-image: url("@/img/hero42x.jpg");

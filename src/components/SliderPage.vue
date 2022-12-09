@@ -20,7 +20,12 @@
             {{ info.paragraph }}
           </p>
           <div class="col-12 gy-5">
-            <button type="button" class="btn">{{ info.button }}</button>
+            <button type="button" class="btn">
+              {{ info.button }}
+              <span v-if="info.button === 'View Take out menu'"
+                ><font-awesome-icon icon="fa-solid fa-car"
+              /></span>
+            </button>
           </div>
         </div>
       </div>
@@ -95,5 +100,10 @@ export default {
   font-variant: small-caps;
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.2);
 }
 </style>
